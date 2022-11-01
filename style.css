@@ -11,7 +11,9 @@
     src: url(./assets/Trispace/Trispace-VariableFont_wdth\,wght.ttf);
 }
 
-
+html{
+    scroll-behavior: smooth;
+}
 *{
     margin: 0;
     padding: 0;
@@ -19,8 +21,10 @@
     text-align: center;
     margin: auto;
 }
-a{
-    text-underline-offset: 5px;
+a, #audio a{
+    text-underline-offset: 4px;
+    text-decoration-thickness: 1px;
+    text-decoration-style: dashed;
 }
 ul{
     list-style: none;
@@ -38,22 +42,33 @@ h2, ul, #audio{
 p{
     font-size: 1.5rem;
 }
+em{
+    font-style: normal;
+    font-weight: bold;
+    color: rgb(56, 56, 56);
 
+}
 section{
-    width: 50vw;
+    width: 100vw;
 }
 section div{
-    margin: auto;
-    margin: 15px 0px;
+    width: 50vw;
+    margin-left: 50%;
+    transform: translateX(50%);
+    margin: 1px 0px;
 }
-section h1, section h2, footer h2{
-    font-family: 'h1-all', sans-serif;
-}
-section h1{
+h1{
     font-size: calc(1.5rem + 2vw);
 }
-section h2, footer h2{
+h1, h2, footer h2{
+    font-family: 'h1-all', sans-serif;
+    color: rgb(56, 56, 56);
+}
+h2, footer h2{
     font-size: calc(1rem + 1.5vw);
+}
+#dates h1, #dates h2{
+    color: rgb(198, 198, 198);
 }
 
 header{
@@ -65,6 +80,10 @@ header{
     flex-direction: column;
 
     background: url(./assets/bg-header.jpg) center/cover no-repeat;
+}
+
+#dates{
+    background: url(./assets/dust.jpg) top no-repeat;
 }
 
 header h1{
@@ -80,26 +99,52 @@ header h1{
  }
 
 /* arrow down */
+#down{
+    margin-bottom: 10vh;
+    transition: 0.2s ease;
+    opacity: 0.8;
+}
+#down:hover{
+    transform: translateY(4px);
+    opacity: 1;
+}
+.scrolldown:hover{
+    border: dashed rgb(255, 166, 0) 2px;
+    background: rgba(0, 0, 0, 0.605);
+}
 .scrolldown, .scrolldown div{
     width: 50px;
     height: 50px;
     max-width: 50px;
     max-height: 50px;
-    margin-bottom: 10vh;
 }    
 .scrolldown div{   
     background: url(./assets/arrowdown1.png) center/cover no-repeat;
     background-position-y: 1px;
 }
 .scrolldown{
-    /* background-color: rgba(255, 166, 0, 0.541); */
     border-radius: 50%;
     border: solid orange 1px;
     background: rgba(0, 0, 0, 0.605);
 }
+#about{
+    background: url(./assets/durt.jpg) no-repeat;
+}
+#dates{
+    background-color: black;
+    color: white;
+    padding: 20px 0px;
+}
+#dates ul{
+    color: rgb(238, 238, 238);
+}
+#dates span{
+    color: rgb(218, 142, 0);
+}
 
-#members li, #dates li, #textecontact{
-    margin-bottom: 12px;
+
+#members li, #dates li{
+    margin-bottom: 20px;
     font-size: calc(1rem + 0.3vw);
 }
 #members span, #dates span{
@@ -111,21 +156,37 @@ header h1{
 #audio{
     display: flex;
     flex-direction: column;
+    margin-left: 50%;
+    transform: translateX(-50%);
 }
 #audio audio{
-    margin-bottom: 20px;
+    margin-bottom: 4px;
+    width: 60%;
+    height: 24px;
+}
+#audio a{
+    margin-bottom: 25px;
+    font-family: 'p-all', sans-serif;
+    font-size: calc(0.9rem + 0.2vw);
+    color: rgb(76, 76, 76);
+    font-weight: bold;
 }
 
 footer{
     width: 100vw;
-    background: silver;
+    background: rgb(0, 0, 0);
     padding: 10px 0px 20px 0px;
 }
-footer div{
-    width: 100vw;
-}
-.contact{
-    text-align: center;
-    font-size: calc(1rem + 0.3vw);
+.contact p{
+    font-family: 'p-all', sans-serif;
+    font-size: calc(0.9rem + 0.2vw);
     margin-bottom: 0;
+    text-align: center;
+    color: white;
+}
+.contact a, #dates a{
+    color: orange;
+}
+.contact div:nth-child(2){
+    margin-top: 6px;
 }
