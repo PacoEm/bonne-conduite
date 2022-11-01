@@ -44,9 +44,11 @@ p{
 }
 em{
     font-style: normal;
+}
+#bonne-conduite{
+    font-style: normal;
     font-weight: bold;
     color: rgb(56, 56, 56);
-
 }
 section{
     width: 100vw;
@@ -102,14 +104,13 @@ header h1{
 #down{
     margin-bottom: 10vh;
     transition: 0.2s ease;
-    opacity: 0.8;
+    opacity: 0.7;
 }
 #down:hover{
-    transform: translateY(4px);
-    opacity: 1;
+    /* transform: translateY(2px); */
+    opacity: 0.9;
 }
 .scrolldown:hover{
-    border: dashed rgb(255, 166, 0) 2px;
     background: rgba(0, 0, 0, 0.605);
 }
 .scrolldown, .scrolldown div{
@@ -124,11 +125,17 @@ header h1{
 }
 .scrolldown{
     border-radius: 50%;
-    border: solid orange 1px;
+    border: dashed rgb(255, 166, 0) 2px;
     background: rgba(0, 0, 0, 0.605);
 }
+
 #about{
     background: url(./assets/durt.jpg) no-repeat;
+    padding-top: 20px;
+}
+#about p{
+    font-size: calc(0.8rem + 1vmin);
+    width: 50vw;
 }
 #dates{
     background-color: black;
@@ -145,7 +152,7 @@ header h1{
 
 #members li, #dates li{
     margin-bottom: 20px;
-    font-size: calc(1rem + 0.3vw);
+    font-size: calc(0.8rem + 0.3vw);
 }
 #members span, #dates span{
     display: block;
@@ -190,3 +197,45 @@ footer{
 .contact div:nth-child(2){
     margin-top: 6px;
 }
+
+/* RESPONSIVE XXXXXXXXXXXXXXXXXXXX */
+
+/* taille du texte de présentation */
+@media screen and (max-width: 710px){
+    #about p{
+        width: 60vw;
+    } 
+}
+@media screen and (max-width: 615px){
+    #about p{
+        width: 70vw;
+    } 
+}
+@media screen and (max-width: 470px){
+    #about p{
+        width: 75vw;
+    } 
+}
+
+/* taille des lecteurs audio */
+@media screen and (max-width: 800px){
+    #audio{
+        width: 75vw;
+    } 
+}
+@media screen and (max-width: 620px){
+    #audio{
+        width: 85vw;
+    } 
+}
+@media screen and (max-width: 560px){
+    #audio{
+        width: 90vw;
+    } 
+}
+@media screen and (max-width: 475px){
+    #audio{
+        width: 100vw;
+    } 
+}
+
